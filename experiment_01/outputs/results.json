@@ -1,0 +1,209 @@
+{
+  "addition": {
+    "max_abs_error": 0.0,
+    "diffuse_fraction_pct": 27.871486,
+    "peak_ghi": 896.0
+  },
+  "subtraction": {
+    "min_dpd": 0.8,
+    "max_dpd": 22.4,
+    "mean_dpd_night": 3.678571,
+    "mean_dpd_afternoon": 18.628571,
+    "fog_risk_hours": 11,
+    "fog_risk_times": [
+      "01-Oct 02:00",
+      "01-Oct 03:00",
+      "01-Oct 04:00",
+      "01-Oct 05:00",
+      "01-Oct 06:00",
+      "02-Oct 05:00",
+      "02-Oct 06:00",
+      "06-Oct 06:00",
+      "07-Oct 05:00",
+      "07-Oct 06:00",
+      "07-Oct 07:00"
+    ],
+    "corr_dpd_rh": -0.989509
+  },
+  "multiplication": {
+    "mean_daily_kwh": 5.287131,
+    "thermal_loss_pct": 9.918667,
+    "min_derate": 0.865783,
+    "max_t_cell": 61.275,
+    "daily_kwh": {
+      "2026-10-01": {
+        "ideal": 6.169,
+        "actual": 5.5428
+      },
+      "2026-10-02": {
+        "ideal": 6.073,
+        "actual": 5.4643
+      },
+      "2026-10-03": {
+        "ideal": 5.564,
+        "actual": 5.0341
+      },
+      "2026-10-04": {
+        "ideal": 5.861,
+        "actual": 5.272
+      },
+      "2026-10-05": {
+        "ideal": 5.664,
+        "actual": 5.1344
+      },
+      "2026-10-06": {
+        "ideal": 5.956,
+        "actual": 5.36
+      },
+      "2026-10-07": {
+        "ideal": 5.798,
+        "actual": 5.2023
+      }
+    }
+  },
+  "scaling": {
+    "A": 3.0,
+    "energy_ratio": 9.0,
+    "kwh_ratio": 3.0,
+    "peak_scaled": 2.33692
+  },
+  "shift": {
+    "k": 24,
+    "mae": 0.673611,
+    "rmse": 0.911348,
+    "rmse_climatology": 3.561649,
+    "skill_pct": 74.412183
+  },
+  "reversal": {
+    "recon_error": 0.0,
+    "even_symmetry_error": 0.0,
+    "odd_symmetry_error": 0.0
+  },
+  "time_scaling": {
+    "D": 3,
+    "L": 3,
+    "len_x": 168,
+    "len_down": 56,
+    "len_up": 166,
+    "recon_rmse": 0.419648,
+    "recon_max_err": 1.566667,
+    "mean_peak_miss": 0.2,
+    "energy_ratio": 0.330914,
+    "daily_max": {
+      "2026-10-01": {
+        "true": 32.7,
+        "synoptic": 32.5
+      },
+      "2026-10-02": {
+        "true": 32.3,
+        "synoptic": 32.3
+      },
+      "2026-10-03": {
+        "true": 32.5,
+        "synoptic": 32.0
+      },
+      "2026-10-04": {
+        "true": 33.4,
+        "synoptic": 33.1
+      },
+      "2026-10-05": {
+        "true": 32.2,
+        "synoptic": 32.2
+      },
+      "2026-10-06": {
+        "true": 33.3,
+        "synoptic": 33.3
+      },
+      "2026-10-07": {
+        "true": 33.7,
+        "synoptic": 33.3
+      }
+    }
+  },
+  "convolution": {
+    "M": 24,
+    "M_short": 3,
+    "len_x": 168,
+    "len_h": 24,
+    "len_y": 191,
+    "std_raw": 3.601662,
+    "std_smooth": 0.298895,
+    "smooth_min": 26.891667,
+    "smooth_max": 28.208333,
+    "mean_diurnal_range": 10.471429,
+    "group_delay": 11.5,
+    "dc_gain": 1.0
+  },
+  "dataset": [
+    {
+      "column": "temp_c",
+      "description": "Air temperature",
+      "unit": "°C",
+      "count": 168.0,
+      "mean": 27.53,
+      "std": 3.612,
+      "min": 21.9,
+      "max": 33.7
+    },
+    {
+      "column": "dewpoint_c",
+      "description": "Dew-point temperature",
+      "unit": "°C",
+      "count": 168.0,
+      "mean": 17.647,
+      "std": 3.126,
+      "min": 10.2,
+      "max": 22.2
+    },
+    {
+      "column": "rh_pct",
+      "description": "Relative humidity",
+      "unit": "%",
+      "count": 168.0,
+      "mean": 58.869,
+      "std": 20.742,
+      "min": 25.0,
+      "max": 95.0
+    },
+    {
+      "column": "ghi_wm2",
+      "description": "Global horizontal irradiance",
+      "unit": "W/m²",
+      "count": 168.0,
+      "mean": 244.554,
+      "std": 318.307,
+      "min": 0.0,
+      "max": 896.0
+    },
+    {
+      "column": "direct_wm2",
+      "description": "Direct horizontal irradiance",
+      "unit": "W/m²",
+      "count": 168.0,
+      "mean": 176.393,
+      "std": 242.214,
+      "min": 0.0,
+      "max": 718.0
+    },
+    {
+      "column": "diffuse_wm2",
+      "description": "Diffuse horizontal irradiance",
+      "unit": "W/m²",
+      "count": 168.0,
+      "mean": 68.161,
+      "std": 80.718,
+      "min": 0.0,
+      "max": 266.0
+    },
+    {
+      "column": "cloud_pct",
+      "description": "Cloud cover",
+      "unit": "%",
+      "count": 168.0,
+      "mean": 21.601,
+      "std": 24.92,
+      "min": 0.0,
+      "max": 99.0
+    }
+  ]
+}
