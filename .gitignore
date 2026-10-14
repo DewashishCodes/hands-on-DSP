@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+
+# Datasets are downloaded and cached by each data_loader.py on first run
+experiment_*/data/
+datasets/
+
+# Word lock files and local tool settings
+~$*
+.claude/settings.local.json
