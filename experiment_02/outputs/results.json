@@ -1,0 +1,104 @@
+{
+  "battery": {
+    "S1": {
+      "system": "24-h moving average",
+      "equation": "y[n] = (1/M) Σ x[n−k],  k = 0 … M−1",
+      "linearity_error": 1.741019224722563e-16,
+      "linear": true,
+      "ti_error": 1.1533856873479303e-17,
+      "time_invariant": true,
+      "lti": true,
+      "matches_expectation": true
+    },
+    "S2": {
+      "system": "Exponential smoother",
+      "equation": "y[n] = α x[n] + (1−α) y[n−1]",
+      "linearity_error": 1.530147131444784e-16,
+      "linear": true,
+      "ti_error": 0.0,
+      "time_invariant": true,
+      "lti": true,
+      "matches_expectation": true
+    },
+    "S3": {
+      "system": "AQI sub-index",
+      "equation": "y[n] = I(x[n]),  piecewise linear",
+      "linearity_error": 0.21817564760094413,
+      "linear": false,
+      "ti_error": 0.0,
+      "time_invariant": true,
+      "lti": false,
+      "matches_expectation": true
+    },
+    "S4": {
+      "system": "Drifting sensor",
+      "equation": "y[n] = (1 + βn) x[n]",
+      "linearity_error": 1.1836005720020456e-16,
+      "linear": true,
+      "ti_error": 0.019756645209658672,
+      "time_invariant": false,
+      "lti": false,
+      "matches_expectation": true
+    }
+  },
+  "responses": {
+    "S1": {
+      "h_sum": 1.0,
+      "t63": 15.0,
+      "t95": 22.0
+    },
+    "S2": {
+      "h_sum": 1.0000000000000002,
+      "t63": 4.0,
+      "t95": 13.0,
+      "tau_theory": 4.481420117724551
+    }
+  },
+  "application": {
+    "peak_raw": 78.5,
+    "peak_raw_time": "2025-10-19 21:00:00",
+    "peak_ma": 65.06666666666666,
+    "peak_ma_time": "2025-10-20 00:00:00",
+    "peak_sm": 71.16331529747822,
+    "peak_sm_time": "2025-10-19 23:00:00",
+    "lag_ma_h": 3,
+    "lag_sm_h": 2,
+    "exceed_hours": 15,
+    "exceed_start": "2025-10-19 17:00:00",
+    "exceed_end": "2025-10-20 07:00:00",
+    "hourly_over_60": 20,
+    "peak_aqi": 161.66666666666669,
+    "peak_category": "Moderate",
+    "category_hours": {
+      "Good": 252,
+      "Satisfactory": 64,
+      "Moderate": 20
+    },
+    "conv_error_ma": 1.3090268215307253e-16,
+    "conv_error_ewma": 1.297297009270948e-16,
+    "pre_mean": 22.850000000000005,
+    "post_mean": 10.792361111111111
+  },
+  "aqi_examples": [
+    [
+      20,
+      33.333333333333336,
+      66.66666666666667
+    ],
+    [
+      45,
+      75.0,
+      200.0
+    ],
+    [
+      75,
+      150.0,
+      323.0769230769231
+    ],
+    [
+      110,
+      266.6666666666667,
+      376.9230769230769
+    ]
+  ]
+}
